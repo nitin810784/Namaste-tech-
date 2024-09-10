@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="projects.css"> -->
+     <link rel="stylesheet" href="header.css">
+     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="fadein.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 50px;
+}
+.hero {
+    background: url('./img/hero-banner-projects.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero span {
+    color: #ffcc00;
+}
+
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background-color: #333;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    width: calc(25% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.project-img img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 1120px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 80%;
+        margin: 20px 0;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .projects h2 {
+        font-size: 2rem;
+    }
+}
+
+</style>
+<body>
+    <div class="header fade-in ">
+        <div class="logo fade-in">
+            <span class="namaste-text">Namaste</span>
+            <span class="tech-highlight">Tech</span>
+        </div>
+
+        <div class="hamburger fade-in" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="nav_bar fade-in" id="navbar">
+            <ul class="navbar_links">
+                <li><a href="./index.html" class="fade-in">Home</a></li>
+                <li><a href="./services.html" class="fade-in">Services</a></li>
+                <li><a href="./about_us.html" class="fade-in">About us</a></li>
+                <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                <li><a href="./login_sign_in.html" class="fade-in">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our <span>Projects</span></h1>
+            <p>Explore some of the innovative projects we've delivered for our clients.</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 1">
+                </div>
+                <h3>Project One</h3>
+                <p>Website development for a leading e-commerce brand, focusing on user experience and conversion optimization.</p>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 2">
+                </div>
+                <h3>Project Two</h3>
+                <p>App development for a fintech startup, integrating real-time payment processing and analytics.</p>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 3">
+                </div>
+                <h3>Project Three</h3>
+                <p>Digital marketing campaign for a global retail chain, boosting their online presence and sales by 30%.</p>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 4">
+                </div>
+                <h3>Project Four</h3>
+                <p>Security solutions for a healthcare provider, securing sensitive data with cutting-edge encryption.</p>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer fade-in">
+        <div class="footer-container fade-in">
+            <!-- Company Section -->
+            <div class="footer-section company fade-in">
+                <h2 class="footer-heading fade-in">Techo</h2>
+                <p class="company-desc fade-in">We provide all digital solutions from web development to digital marketing, making your business stand out.</p>
+            </div>
+    
+            <!-- Useful Links Section -->
+            <div class="footer-section useful-links fade-in">
+                <h2 class="footer-heading fade-in">Useful Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./about_us.html" class="fade-in">About Us</a></li>
+                    <li><a href="./services.html" class="fade-in">Services</a></li>
+                    <li><a href="./projects.html" class="fade-in">Our Projects</a></li>
+                    <li><a href="./testimonials.html" class="fade-in">Testimonials</a></li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links fade-in">
+                <h2 class="footer-heading fade-in">Quick Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./blog.html" class="fade-in">Blog</a></li>
+                    <li><a href="./faq.html" class="fade-in">FAQ</a></li>
+                    <li><a href="./career.html" class="fade-in">Careers</a></li>
+                    <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Have a Question Section -->
+            <div class="footer-section contact fade-in">
+                <h2 class="footer-heading fade-in">Have a Question?</h2>
+                <p class="fade-in">Feel free to get in touch with us.</p>
+                <p class="fade-in">Email: hemant505gautam@gmail.com</p>
+                <p class="fade-in">Phone: +91 9351733774</p>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom fade-in">
+            <p>&copy; 2024 Techo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./header.js"></script>
+</body>
+</html>

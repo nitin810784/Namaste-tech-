@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="login_sign_in.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="fadein.css">
+    <title>Login / Sign Up</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="namaste-text">Namaste</span>
+            <span class="tech-highlight">Tech</span>
+        </div>
+        <div class="hamburger fade-in" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav_bar" id="navbar">
+            <ul class="navbar_links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./about_us.html">About Us</a></li>
+                <li><a href="./contact_us.html">Contact Us</a></li>
+                <li><a href="./login_sign_in.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="all-container">
+        <div class="container">
+            <!-- Login form -->
+            <div id="login-form" class="form-container">
+                <h2>Login</h2>
+                <form action="#" method="post">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+
+                    <button type="submit">Login</button>
+                    <p class="forgot-password sign-acc"><a href="#" class="a-link ">Forgot Password?</a></p>
+                </form>
+                <p class="sign-acc">Don't have an account? <a href="#" id="to-signup" class="a-link">Sign Up</a></p>
+            </div>
+
+            <!-- Sign-up form -->
+            <div id="signup-form" class="form-container" style="display: none;">
+                <h2>Sign Up</h2>
+                <form action="#" method="post">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" name="name" required>
+
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p class="sign-acc">Already have an account? <a href="#" id="to-login" class="a-link">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for validation messages -->
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <footer class="footer fade-in">
+        <div class="footer-container fade-in">
+            <!-- Company Section -->
+            <div class="footer-section company fade-in">
+                <h2 class="footer-heading fade-in">Techo</h2>
+                <p class="company-desc fade-in">We provide all digital solutions from web development to digital marketing, making your business stand out.</p>
+            </div>
+    
+            <!-- Useful Links Section -->
+            <div class="footer-section useful-links fade-in">
+                <h2 class="footer-heading fade-in">Useful Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./about_us.html" class="fade-in">About Us</a></li>
+                    <li><a href="./services.html" class="fade-in">Services</a></li>
+                    <!-- <li><a href="./projects.html" class="fade-in">Our Projects</a></li> -->
+                    <!-- <li><a href="./testimonials.html" class="fade-in">Testimonials</a></li> -->
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links fade-in">
+                <h2 class="footer-heading fade-in">Quick Links</h2>
+                <ul class="footer-links fade-in">
+                    <!-- <li><a href="./blog.html" class="fade-in">Blog</a></li> -->
+                    <li><a href="./faq.html" class="fade-in">FAQ</a></li>
+                    <li><a href="./career.html" class="fade-in">Careers</a></li>
+                    <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Have a Question Section -->
+            <div class="footer-section contact fade-in">
+                <h2 class="footer-heading fade-in">Have a Question?</h2>
+                <p class="fade-in">Feel free to get in touch with us.</p>
+                <p class="fade-in">Email: hemant505gautam@gmail.com</p>
+                <p class="fade-in">Phone: +91 9351733774</p>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom fade-in">
+            <p>&copy; 2024 Techo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="form-toggle.js"></script>
+    <script src="./header.js"></script>
+</body>
+
+</html>

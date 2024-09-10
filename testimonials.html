@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="fadein.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 100px;
+}
+
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    font-size: 1.1rem;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.testimonial-card span {
+    font-size: 0.9rem;
+    color: #666;
+}
+/* Media Queries */
+
+/* Large Tablets and Desktops */
+@media (max-width: 1024px) {
+    .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+}
+
+</style>
+<body>
+    <div class="header fade-in ">
+        <div class="logo fade-in">
+            <span class="namaste-text">Namaste</span>
+            <span class="tech-highlight">Tech</span>
+        </div>
+
+        <div class="hamburger fade-in" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="nav_bar fade-in" id="navbar">
+            <ul class="navbar_links">
+                <li><a href="./index.html" class="fade-in">Home</a></li>
+                <li><a href="./services.html" class="fade-in">Services</a></li>
+                <li><a href="./about_us.html" class="fade-in">About us</a></li>
+                <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                <li><a href="./login_sign_in.html" class="fade-in">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Techo transformed our online presence. Their attention to detail and professionalism is unmatched."</p>
+                    <h4>- Sarah Johnson</h4>
+                    <span>CEO, Tech Innovations</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A seamless experience from start to finish. Highly recommend their development services!"</p>
+                    <h4>- Michael Adams</h4>
+                    <span>Founder, GreenTech Solutions</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The team at Techo is incredibly talented and easy to work with. They exceeded our expectations."</p>
+                    <h4>- Emily Brown</h4>
+                    <span>Marketing Head, Blue Sky Media</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer fade-in">
+        <div class="footer-container fade-in">
+            <!-- Company Section -->
+            <div class="footer-section company fade-in">
+                <h2 class="footer-heading fade-in">Techo</h2>
+                <p class="company-desc fade-in">We provide all digital solutions from web development to digital marketing, making your business stand out.</p>
+            </div>
+    
+            <!-- Useful Links Section -->
+            <div class="footer-section useful-links fade-in">
+                <h2 class="footer-heading fade-in">Useful Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./about_us.html" class="fade-in">About Us</a></li>
+                    <li><a href="./services.html" class="fade-in">Services</a></li>
+                    <li><a href="./projects.html" class="fade-in">Our Projects</a></li>
+                    <li><a href="./testimonials.html" class="fade-in">Testimonials</a></li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links fade-in">
+                <h2 class="footer-heading fade-in">Quick Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./blog.html" class="fade-in">Blog</a></li>
+                    <li><a href="./faq.html" class="fade-in">FAQ</a></li>
+                    <li><a href="./career.html" class="fade-in">Careers</a></li>
+                    <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Have a Question Section -->
+            <div class="footer-section contact fade-in">
+                <h2 class="footer-heading fade-in">Have a Question?</h2>
+                <p class="fade-in">Feel free to get in touch with us.</p>
+                <p class="fade-in">Email: hemant505gautam@gmail.com</p>
+                <p class="fade-in">Phone: +91 9351733774</p>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom fade-in">
+            <p>&copy; 2024 Techo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./header.js"></script>
+</body>
+</html>

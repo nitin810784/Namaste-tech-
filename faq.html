@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - NT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="fadein.css">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            padding-top: 120px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Heading Styles */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: black;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            background-color: #3f51b5bc;
+            color: black;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-question:hover {
+            background-color: #3F51B5;
+            transform: translateY(-2px);
+        }
+
+        .faq-answer {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.708);
+            color: #fff;
+            padding: 15px;
+            border-left: 4px solid #3F51B5;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            font-size: 1rem;
+            padding: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1.1rem;
+            }
+
+           
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .faq-answer p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 0.9rem;
+            }
+
+            .faq-answer p {
+                font-size: 0.8rem;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="header fade-in ">
+        <div class="logo fade-in">
+            <span class="namaste-text">Namaste</span>
+            <span class="tech-highlight">Tech</span>
+        </div>
+
+        <div class="hamburger fade-in" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="nav_bar fade-in" id="navbar">
+            <ul class="navbar_links">
+                <li><a href="./index.html" class="fade-in">Home</a></li>
+                <li><a href="./services.html" class="fade-in">Services</a></li>
+                <li><a href="./about_us.html" class="fade-in">About us</a></li>
+                <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                <li><a href="./login_sign_in.html" class="fade-in">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer('faq1')">
+                What services do you offer at Techo?
+            </div>
+            <div id="faq1" class="faq-answer">
+                <p>We offer a wide range of digital solutions including web development, app development, digital marketing, and much more. Our goal is to provide you with the tools to make your business stand out online.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer('faq2')">
+                How can I contact Techo for support?
+            </div>
+            <div id="faq2" class="faq-answer">
+                <p>You can contact us through our contact form on the website, or by emailing us at hemant505gautam@gmail.com. We're also available via phone at +91 9351733774 for urgent inquiries.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer('faq3')">
+                What is your pricing model?
+            </div>
+            <div id="faq3" class="faq-answer">
+                <p>Our pricing model is flexible based on the services you require. We offer custom packages depending on the scope of your project and the services required. Contact us for a personalized quote.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer('faq4')">
+                Do you offer ongoing maintenance after project completion?
+            </div>
+            <div id="faq4" class="faq-answer">
+                <p>Yes, we offer ongoing maintenance and support for all our projects. Whether you need regular updates, security checks, or feature enhancements, we’ve got you covered.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer('faq5')">
+                How long does it take to complete a project?
+            </div>
+            <div id="faq5" class="faq-answer">
+                <p>Project completion time depends on the complexity and scope of the project. On average, a standard website can take anywhere from 4 to 6 weeks, while more complex projects may take longer. We ensure timely delivery while maintaining quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fade-in">
+        <div class="footer-container fade-in">
+            <!-- Company Section -->
+            <div class="footer-section company fade-in">
+                <h2 class="footer-heading fade-in">Techo</h2>
+                <p class="company-desc fade-in">We provide all digital solutions from web development to digital marketing, making your business stand out.</p>
+            </div>
+    
+            <!-- Useful Links Section -->
+            <div class="footer-section useful-links fade-in">
+                <h2 class="footer-heading fade-in">Useful Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./about_us.html" class="fade-in">About Us</a></li>
+                    <li><a href="./services.html" class="fade-in">Services</a></li>
+                    <!-- <li><a href="./projects.html" class="fade-in">Our Projects</a></li> -->
+                    <!-- <li><a href="./testimonials.html" class="fade-in">Testimonials</a></li> -->
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links fade-in">
+                <h2 class="footer-heading fade-in">Quick Links</h2>
+                <ul class="footer-links fade-in">
+                    <!-- <li><a href="./blog.html" class="fade-in">Blog</a></li> -->
+                    <li><a href="./faq.html" class="fade-in">FAQ</a></li>
+                    <li><a href="./career.html" class="fade-in">Careers</a></li>
+                    <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Have a Question Section -->
+            <div class="footer-section contact fade-in">
+                <h2 class="footer-heading fade-in">Have a Question?</h2>
+                <p class="fade-in">Feel free to get in touch with us.</p>
+                <p class="fade-in">Email:  hemant505gautam@gmail.com</p>
+                <p class="fade-in">Phone: +91 9351733774</p>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom fade-in">
+            <p>&copy; 2024 Techo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./header.js"></script>
+
+    <script>
+        function toggleAnswer(faqId) {
+            const answer = document.getElementById(faqId);
+            answer.style.display = answer.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>

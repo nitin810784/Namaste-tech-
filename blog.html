@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="blog.css"> -->
+     <link rel="stylesheet" href="header.css">
+     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="fadein.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Blog Hero Section */
+.blog-hero {
+    background: url('./img/blog-hero.jpg') no-repeat center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.blog-hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.blog-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-hero p {
+    font-size: 1.5rem;
+}
+
+/* Blog Posts Section */
+.blog-posts {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.post-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.post-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 40px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.post-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.post-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.post-item p {
+    margin-bottom: 10px;
+}
+
+.post-item a {
+    text-decoration: none;
+    color: #00e676;
+    font-weight: bold;
+}
+
+.post-item:hover {
+    transform: translateY(-10px);
+    background-color: #ffcc00;
+    color: #333;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .blog-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .post-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-item {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+
+    .post-item {
+        width: 100%;
+    }
+}
+
+</style>
+<body>
+    <div class="header fade-in ">
+        <div class="logo fade-in">
+            <span class="namaste-text">Namaste</span>
+            <span class="tech-highlight">Tech</span>
+        </div>
+
+        <div class="hamburger fade-in" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="nav_bar fade-in" id="navbar">
+            <ul class="navbar_links">
+                <li><a href="./index.html" class="fade-in">Home</a></li>
+                <li><a href="./services.html" class="fade-in">Services</a></li>
+                <li><a href="./about_us.html" class="fade-in">About us</a></li>
+                <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                <li><a href="./login_sign_in.html" class="fade-in">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1>Our Blog</h1>
+            <p>Get the latest updates and insights from the tech world</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+        <div class="post-container">
+            <div class="post-item">
+                <img src="./img/blog1.jpg" alt="Blog Post 1">
+                <h2>Building a Responsive Website</h2>
+                <p>Learn how to create a fully responsive website that works across all devices...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="post-item">
+                <img src="./img/blog2.jpg" alt="Blog Post 2">
+                <h2>Top Digital Marketing Strategies</h2>
+                <p>Discover the latest trends in digital marketing that can boost your business...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="post-item">
+                <img src="./img/blog3.jpg" alt="Blog Post 3">
+                <h2>Enhancing Security with Ethical Hacking</h2>
+                <p>Understand how ethical hacking can strengthen your company's security...</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <div class="footer-container fade-in">
+            <!-- Company Section -->
+            <div class="footer-section company fade-in">
+                <h2 class="footer-heading fade-in">Techo</h2>
+                <p class="company-desc fade-in">We provide all digital solutions from web development to digital marketing, making your business stand out.</p>
+            </div>
+    
+            <!-- Useful Links Section -->
+            <div class="footer-section useful-links fade-in">
+                <h2 class="footer-heading fade-in">Useful Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./about_us.html" class="fade-in">About Us</a></li>
+                    <li><a href="./services.html" class="fade-in">Services</a></li>
+                    <li><a href="./projects.html" class="fade-in">Our Projects</a></li>
+                    <li><a href="./testimonials.html" class="fade-in">Testimonials</a></li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links fade-in">
+                <h2 class="footer-heading fade-in">Quick Links</h2>
+                <ul class="footer-links fade-in">
+                    <li><a href="./blog.html" class="fade-in">Blog</a></li>
+                    <li><a href="./faq.html" class="fade-in">FAQ</a></li>
+                    <li><a href="./career.html" class="fade-in">Careers</a></li>
+                    <li><a href="./contact_us.html" class="fade-in">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Have a Question Section -->
+            <div class="footer-section contact fade-in">
+                <h2 class="footer-heading fade-in">Have a Question?</h2>
+                <p class="fade-in">Feel free to get in touch with us.</p>
+                <p class="fade-in">Email: info@techo.com</p>
+                <p class="fade-in">Phone: +91 234-567-890</p>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom fade-in">
+            <p>&copy; 2024 Techo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./header.js"></script>
+</body>
+</html>

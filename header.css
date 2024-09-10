@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    /* color: #FFD700; */
+    background-color: transparent;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* 'Namaste' text styling */
+.namaste-text {
+    font-size: 3.2rem;
+    color: #3F51B5;
+    transition: color 0.3s ease;
+}
+
+/* 'Tech' text styling */
+.tech-text {
+    font-size: 2.8rem;
+    color: #1A1A1A;
+    background-color: #3F51B5;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: transform 0.3s ease, top 0.3s ease;
+}
+
+/* Navigation Bar */
+.nav_bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_links {
+    display: flex;
+    list-style: none;
+}
+
+/* Navigation Links */
+.navbar_links li {
+    margin-left: 40px;
+    position: relative;
+}
+
+.navbar_links a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Neon Hover Effect */
+.navbar_links a:hover {
+    color: #00e676;
+    text-shadow: 0px 0px 5px #00e676, 0px 0px 10px #00e676;
+    transform: scale(1.1);
+}
+
+/* Fancy Hover Underline Effect */
+.navbar_links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00e676;
+    left: 0;
+    bottom: -4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar_links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Background effect */
+.header::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.2), transparent 80%);
+    z-index: -1;
+    opacity: 0.2;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+/* Hamburger Menu (Hidden by default on larger screens) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Styling for Medium Screens (971px and below) */
+@media (max-width: 1056px) {
+    /* Hamburger menu for screens 971px and below */
+    
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide nav bar on smaller screens */
+    .nav_bar {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(15, 32, 39, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+    }
+
+    .show-navbar {
+        display: flex;
+    }
+
+    .navbar_links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar_links li {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        padding: 8px;
+    }
+
+    .namaste-text {
+        font-size: 2.5rem;
+    }
+
+    .tech-text {
+        font-size: 2.2rem;
+        padding: 4px 10px;
+    }
+
+    .navbar_links li {
+        margin-left: 30px;
+    }
+
+    .navbar_links a {
+        font-size: 17px;
+    }
+
+    .header {
+        padding: 15px 40px;
+    }
+}
+
+/* Responsive Styling for Tablets (768px) */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        padding: 8px;
+    }
+
+    .namaste-text {
+        font-size: 2.5rem;
+    }
+
+    .tech-text {
+        font-size: 2.2rem;
+        padding: 4px 10px;
+    }
+
+    .navbar_links li {
+        margin-left: 20px;
+    }
+
+    .header {
+        padding: 15px 30px;
+    }
+}
+
+/* Responsive Styling for Mobile (480px and below) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.8rem;
+        padding: 5px 0;
+        flex-direction: column;
+    }
+
+    .namaste-text {
+        font-size: 1.6rem;
+    }
+
+    .tech-text {
+        font-size: 1.6rem;
+        margin-top: 5px;
+        padding: 4px 8px;
+    }
+}

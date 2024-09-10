@@ -1,0 +1,109 @@
+.footer {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 60px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    flex-basis: 23%;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1.75rem;
+    color: #3F51B5;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.company-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #dddddd;
+}
+
+/* Footer Links Styling */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.4s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b0b0b;
+    color: #fff;
+    font-size: 1rem;
+    border-top: 1px solid #444;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-section {
+        flex-basis: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}

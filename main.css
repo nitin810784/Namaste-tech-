@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #E3F2FD, #F5F5F5);
+
+}
+
+/* Fade-in animation for the header text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background_img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/bg_1.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.background_img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    z-index: 1; /* Ensure it covers the image but is behind the text */
+}
+
+
+.background_img h1, .background_img p {
+    position: relative;
+    color: #ffffff;
+    margin: 0;
+    padding: 0 20px;
+    max-width: 90%;
+    line-height: 1.2;
+    z-index: 2; /* Make sure text appears above the overlay */
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.background_img h1{
+    font-size: 4rem;
+}
+.background_img p {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+/* Media Queries for responsiveness */
+
+@media (max-width:1056px) {
+    .background_img{
+        margin-top:auto;
+    }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media (max-width: 1024px) {
+    .background_img {
+        height: 80vh;
+        padding: 15px;
+    }
+
+    .background_img h1 {
+        font-size: 2rem;
+    }
+
+    .background_img p {
+        font-size: 1.25rem;
+    }
+    .background_img_new {
+        background-size: cover;
+    }
+}
+
+/* Mobile Devices (Portrait) */
+@media (max-width: 768px) {
+    .background_img {
+        height: 70vh;
+    }
+
+    .background_img h1 {
+        font-size: 1.75rem;
+    }
+
+    .background_img p {
+        font-size: 1rem;
+    }
+    .background_img_new {
+        background-size: cover;
+    }
+}
+
+/* Mobile Devices (Small screens) */
+@media (max-width: 480px) {
+    .background_img {
+        height: 60vh;
+    }
+
+    .background_img h1 {
+        font-size: 1.5rem;
+    }
+
+    .background_img p {
+        font-size: 0.9rem;
+    }
+    .background_img_new {
+        background-size: cover;
+    }
+}
+
+/* Service Section Styling */
+.service-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Section Title and Subtitle */
+.section-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Service List Styling */
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Service Item Styling */
+.service-item {
+    background-color: white;
+    padding: 20px;
+    flex: 1 1 calc(45% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Service Info Styling */
+.service-info {
+    text-align: left;
+}
+
+.service-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Service Icon Styling */
+.service-icon {
+    font-size: 3rem;
+    color: #ff6347;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    color: #ff4500;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and Mobile Devices */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* Base container and image styling */
+.background_img_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    background-color: #f4f7fa;
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-right {
+    width: 45%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1A237E;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: #3F51B5;
+    font-size: 5rem;
+}
+
+/* Service items styling */
+.service-item_2 {
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item_2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon_2 {
+    font-size: 2.5rem;
+    color: #3F51B5;
+    margin-right: 1.5rem;
+}
+
+.service-title_2 {
+    font-size: 1.8rem;
+    color: #1A237E;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.service-description_2 {
+    color: #4E5B70;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 80%;
+}
+
+@media (max-width: 768px) {
+    .background_img_2 {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image-right {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .service-item_2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon_2 {
+        margin-bottom: 1rem;
+    }
+
+    .service-title_2 {
+        font-size: 1.6rem;
+    }
+
+    .service-description_2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+
